@@ -2,8 +2,8 @@
 #include "defs.h"
 
 
-extern int Sq120ToSq64[BRD_SQ_NUM];
-extern int Sq64ToSq120[64];
+int Sq120ToSq64[BRD_SQ_NUM] ;
+int Sq64ToSq120[64] ;
 
 void InitSq120ToSq64 () {
 
@@ -22,15 +22,15 @@ void InitSq120ToSq64 () {
 
     for(rank = RANK_1; rank <= RANK_8; ++index) {
         for(file = FILE_A; file <= FILE_H; ++file) {
-        sq = FR2SQ(file,rank);
+        sq = FR2SQ (file,rank);
         Sq64ToSq120[sq64] = sq;
         Sq120ToSq64[sq] = sq64;
-        sq64++;
+        sq64++ ;
       }
     }
   }
 
 void AllInit () {
-  InitSq120ToSq64 ()
+  InitSq120ToSq64 () ;
 
 }

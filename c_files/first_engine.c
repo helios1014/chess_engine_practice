@@ -3,6 +3,8 @@
 int main () {
 	AllInit ();
 
+  int index = 0; //forgot to declare this variable
+
   for(index = 0; index < BRD_SQ_NUM; ++index) {
     if(index%10==0) printf("\n");
     printf("%d5", Sq120ToSq64[index]);

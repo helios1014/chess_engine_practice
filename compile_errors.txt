@@ -1,0 +1,38 @@
+#8/3/25 13:42
+
+init.c: In function ‘InitSq120ToSq64’:
+init.c:25:30: error: expected ‘)’ before ‘;’ token
+   25 |         sq = FR2SQ(file,rank);
+      |                              ^
+In file included from init.c:2:
+defs.h:68:20: note: to match this ‘(’
+   68 | #define FR2SQ(f,r) ( (21 + (f) ) + ( ( (r) * 10 ) ) // converts rank file as enum above to 120 brd
+      |                    ^
+init.c:25:14: note: in expansion of macro ‘FR2SQ’
+   25 |         sq = FR2SQ(file,rank);
+      |              ^~~~~
+init.c:28:16: error: expected ‘;’ before ‘}’ token
+   28 |         sq64++;
+      |                ^
+      |                ;
+   29 |       }
+      |       ~         
+init.c: In function ‘AllInit’:
+init.c:34:21: error: expected ‘;’ before ‘}’ token
+   34 |   InitSq120ToSq64 ()
+      |                     ^
+      |                     ;
+   35 | 
+   36 | }
+      | ~                    
+first_engine.c: In function ‘main’:
+first_engine.c:6:7: error: ‘index’ undeclared (first use in this function)
+    6 |   for(index = 0; index < BRD_SQ_NUM; ++index) {
+      |       ^~~~~
+first_engine.c:6:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Makefile:2: all] Error 1
+
+#8/3/25 18:07
+./first_engine
+Segmentation fault         (core dumped) ./first_engine
+
