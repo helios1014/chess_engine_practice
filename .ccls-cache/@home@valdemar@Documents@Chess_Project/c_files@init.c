@@ -20,7 +20,7 @@ void InitSq120ToSq64() {
       Sq64ToSq120[index] = 120; //sets all values to number that is not on the board
     }
 
-    for(rank = RANK_1; rank <= RANK_8; ++index) {
+    for(rank = RANK_1; rank <= RANK_8; ++rank) {
         for(file = FILE_A; file <= FILE_H; ++file) {
         sq = FR2SQ(file,rank);
         Sq64ToSq120[sq64] = sq;

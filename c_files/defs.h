@@ -65,7 +65,7 @@ typedef struct {
 
 /* MACROS */
 
-#define FR2SQ(f,r) ( (21 + (f) ) + ( ( (r) * 10 ) )) // converts rank file as enum above to 120 brd
+#define FR2SQ(f,r) ( (21 + (f) ) + ( (r) * 10 ) ) // converts rank file as enum above to 120 brd
 
 /* GLOBALS */
 
